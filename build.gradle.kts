@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.bouncycastle:bcprov-jdk18on:1.80")
+    implementation("org.bouncycastle:bcprov-debug-jdk18on:1.79")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-jackson:2.11.0")
     testImplementation(kotlin("test"))
