@@ -1,3 +1,5 @@
+package dev.fromnowon
+
 import com.fasterxml.jackson.databind.node.ObjectNode
 import retrofit2.Call
 import retrofit2.http.Body

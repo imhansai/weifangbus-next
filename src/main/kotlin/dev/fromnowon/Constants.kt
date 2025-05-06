@@ -1,3 +1,5 @@
+package dev.fromnowon
+
 class Constants {
 
     class Base {
