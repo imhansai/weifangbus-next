@@ -12,8 +12,8 @@ fun getOtp(): Pair<String, String> {
 
     val call = loginService.getOtp(jsonObject)
     val response = call.execute()
-    val jsonNode = response.body()?.get("dataenc") ?: throw NullPointerException("Response body is null")
-    val dataenc = jsonNode.textValue()
+    val jsonNode = response.body() ?: throw NullPointerException("Response body is null")
+    val dataenc = jsonNode.get("dataenc")?.textValue() ?: throw RuntimeException("dataenc not found")
     val dataByteArray = sm4(Cipher.DECRYPT_MODE, decoder.decode(dataenc))
 
     val jsonNodes = objectMapper.readTree(dataByteArray)
